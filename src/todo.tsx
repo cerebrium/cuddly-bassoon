@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes, { InferProps } from 'prop-types'
 
-const Todo = ({
+export function Todo ({
     onClick,
     text,
     completed
-    }: InferProps<Todo.propTypes>) => {
+    }: InferProps<typeof Todo.propTypes>) {
 
     return (
         <>
@@ -26,5 +26,3 @@ Todo.propTypes = {
     completed: PropTypes.bool.isRequired,
     text: PropTypes.string.isRequired
 }
-
-export default Todo
