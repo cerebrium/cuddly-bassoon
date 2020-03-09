@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import './App.scss';
 
-const App = () => {
+const TodoList = () => {
   return (
     <>
       <h1>Hello World</h1>
@@ -10,4 +10,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default TodoList;
