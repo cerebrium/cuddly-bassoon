@@ -1,22 +1,21 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes, { InferProps } from 'prop-types'
 
-export interface todoProps {
-    onClick(event: MouseEvent): void 
-    completed: boolean,
-    text: string
-}
+const Todo = ({
+    onClick,
+    text,
+    completed
+    }: InferProps<Todo.propTypes>) => {
 
-const Todo = (todoProps: todoProps) => {
     return (
         <>
             <li
-                onClick={todoProps.onClick}
+                onClick={onClick}
                 style={{
-                    textDecoration: todoProps.completed ? 'line-through' : 'none'
+                    textDecoration: completed ? 'line-through' : 'none'
                 }}
             >
-                {todoProps.text}
+                {text}
             </li>
         </>
     )
